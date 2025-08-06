@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Roadways - B2B Scaling Up Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .slide-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 50;
+        }
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid #1e3a8a;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-dot.active {
+            background-color: #1e3a8a;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Slide Navigation -->
+    <div id="slide-nav" class="slide-nav"></div>
+
+    <!-- Slide 1: Title -->
+    <section id="slide-1" class="slide bg-gradient-to-br from-blue-900 to-gray-900 text-white">
+        <div class="slide-content text-center fade-in">
+            <div class="mb-4">
+                <svg class="w-24 h-24 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 19H15.5C16.8807 19 18 17.8807 18 16.5V13.0588C18 12.5161 17.794 11.996 17.4344 11.6364L13.6364 7.83841C13.2767 7.47878 12.7567 7.27273 12.214 7.27273H8.5C7.11929 7.27273 6 8.39202 6 9.77273V16.5C6 17.8807 7.11929 19 8.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 5H13C14.1046 5 15 5.89543 15 7V7.27273" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">BEST ROADWAYS LIMITED</h1>
+            <p class="text-2xl md:text-4xl text-blue-300">Scaling Up B2B Logistics: Challenges & Solutions</p>
+            <p class="mt-8 text-lg text-gray-400">August 2025</p>
+        </div>
+    </section>
+
+    <!-- Slide 2: Service Offerings -->
+    <section id="slide-2" class="slide bg-white">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Our Service Offerings</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+                <!-- FTL -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2M4 13H2"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">FTL - Full Truck Load</h3>
+                    <p class="text-gray-600">High Volume, Low Margin</p>
+                </div>
+                <!-- PTL -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">PTL - Part Truck Load</h3>
+                    <p class="text-gray-600">High Volume, Good Margin</p>
+                </div>
+                <!-- Warehousing -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Warehousing</h3>
+                    <p class="text-gray-600">Low Volume, High Margin</p>
+                </div>
+                <!-- Multimodal -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Multimodal</h3>
+                    <p class="text-gray-600">Low Volume, High Margin</p>
+                </div>
+                <!-- Petroleum -->
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2">Best Petroleum</h3>
+                    <p class="text-gray-600">High Volume, Low Margin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Revenue and Margin Split -->
+    <section id="slide-3" class="slide bg-blue-50">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Revenue & Margin Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Key Insights</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3">&#10003;</span>
+                            <p><strong class="font-semibold">Market Vehicle Business</strong> is the largest revenue contributor at 290 Crores.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3">&#10003;</span>
+                            <p><strong class="font-semibold">Own Vehicle Business</strong> is a key driver of profitability with a significant 220 Crore revenue and a strong 28.29% margin.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-3">&#10003;</span>
+                            <p><strong class="font-semibold">Multimodal & Warehousing</strong>, though smaller in revenue, offer the highest margins (34%+).</p>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="text-orange-500 mr-3">&#9888;</span>
+                            <p><strong class="font-semibold">Opportunity:</strong> Focus on scaling high-margin services and improving margins in high-volume segments.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: The Core Challenge -->
+    <section id="slide-4" class="slide bg-gray-800 text-white">
+        <div class="slide-content text-center fade-in">
+            <h2 class="text-4xl font-bold mb-6">The Core Challenge: Achieving Scale</h2>
+            <p class="text-xl text-gray-300 mb-12">Our goal is to accelerate growth beyond the industry average.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg text-center">
+                    <p class="text-2xl font-semibold text-blue-300">Last YoY Growth</p>
+                    <p class="text-6xl font-bold text-red-400 my-2">16.75%</p>
+                </div>
+                <div class="text-5xl text-gray-500">&rarr;</div>
+                <div class="bg-gray-700 p-8 rounded-lg shadow-lg text-center">
+                    <p class="text-2xl font-semibold text-blue-300">Target Growth Rate</p>
+                    <p class="text-6xl font-bold text-green-400 my-2">&ge;25%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Broad Challenges -->
+    <section id="slide-5" class="slide bg-white">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Industry Headwinds & Internal Gaps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start p-4">
+                    <div class="flex-shrink-0"><svg class="w-12 h-12 text-red-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">Commoditized Industry</h3><p class="text-gray-600">Price is often the primary decision factor, leading to a "race to the bottom".</p></div>
+                </div>
+                <div class="flex items-start p-4">
+                    <div class="flex-shrink-0"><svg class="w-12 h-12 text-red-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-5.176-5.97M15 21h6v-1a6 6 0 00-9-5.197"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">Hyper-Competition</h3><p class="text-gray-600">Numerous players fighting for market share.</p></div>
+                </div>
+                <div class="flex items-start p-4">
+                    <div class="flex-shrink-0"><svg class="w-12 h-12 text-red-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m-6 3l6-3"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">Limited Network</h3><p class="text-gray-600">Weak presence in high-potential South and East regions.</p></div>
+                </div>
+                <div class="flex items-start p-4">
+                     <div class="flex-shrink-0"><svg class="w-12 h-12 text-orange-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">Undefined Sales Process</h3><p class="text-gray-600">Lack of a structured approach to sales and lead management.</p></div>
+                </div>
+                <div class="flex items-start p-4">
+                     <div class="flex-shrink-0"><svg class="w-12 h-12 text-orange-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">No Single Window CRM</h3><p class="text-gray-600">Absence of a centralized system for customer relationship management.</p></div>
+                </div>
+                <div class="flex items-start p-4">
+                     <div class="flex-shrink-0"><svg class="w-12 h-12 text-orange-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div>
+                    <div><h3 class="text-xl font-semibold">Lack of Go-to-Market Strategy</h3><p class="text-gray-600">No clear plan for reaching target customer segments.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Competitive Landscape -->
+    <section id="slide-6" class="slide bg-blue-50">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Competitive Landscape</h2>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="w-full text-left bg-white">
+                    <thead class="bg-blue-800 text-white">
+                        <tr>
+                            <th class="p-4 font-semibold">Company</th>
+                            <th class="p-4 font-semibold">Operating Income (FY24)</th>
+                            <th class="p-4 font-semibold">YoY Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-blue-700">Express Roadways</td>
+                            <td class="p-4">₹ 1,276 Cr</td>
+                            <td class="p-4"><span class="text-green-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>+22%</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-blue-700">Surat Goods Transport</td>
+                            <td class="p-4">₹ 1,079.5 Cr (FY23)</td>
+                            <td class="p-4"><span class="text-green-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>+18% (FY23)</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 font-semibold text-blue-700">BLR Logistiks</td>
+                            <td class="p-4">₹ 621.5 Cr</td>
+                            <td class="p-4"><span class="text-green-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>Steady Growth</span></td>
+                        </tr>
+                        <tr class="bg-blue-100">
+                            <td class="p-4 font-bold text-blue-900">Best Roadways Ltd</td>
+                            <td class="p-4 font-bold">₹ 515 Cr</td>
+                            <td class="p-4"><span class="text-orange-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>16.75%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Gap Analysis -->
+    <section id="slide-7" class="slide bg-white">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Gap Analysis vs. Peers</h2>
+            <div class="space-y-6">
+                <!-- Anchor Accounts -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-2xl font-semibold text-blue-800">Anchor Accounts</h3>
+                        <span class="text-red-500 font-bold">GAP</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div><p class="font-semibold">What Peers Do:</p><p>Grow via repeat orders from large, diverse clients (e.g., BLR).</p></div>
+                        <div><p class="font-semibold">Our Gap:</p><p>Need for stronger Key Account Management, quarterly reviews, and expansion plans for top 25 clients.</p></div>
+                    </div>
+                </div>
+                <!-- PTL Network -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-2xl font-semibold text-blue-800">PTL Network</h3>
+                        <span class="text-red-500 font-bold">GAP</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div><p class="font-semibold">What Peers Do:</p><p>Run dense PTL networks across India (e.g., Inland, SGT).</p></div>
+                        <div><p class="font-semibold">Our Gap:</p><p>Predominantly focused on the Northern Region; need to expand South and East.</p></div>
+                    </div>
+                </div>
+                <!-- Bundling Services -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-2xl font-semibold text-blue-800">Warehousing/3PL Bundling</h3>
+                        <span class="text-red-500 font-bold">GAP</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div><p class="font-semibold">What Peers Do:</p><p>Bundle transport with warehousing/3PL services (e.g., Express, SGT).</p></div>
+                        <div><p class="font-semibold">Our Gap:</p><p>Negligible percentage of clients using more than one service.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: Strategic Solutions -->
+    <section id="slide-8" class="slide bg-blue-50">
+        <div class="slide-content fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Our Strategic Path to 25%+ Growth</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Key Accounts -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.125-1.273-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.125-1.273.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Deepen Key Accounts</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Conduct quarterly business reviews and pitch at least one Value-Added Service (VAS) to top 25 clients.</p>
+                    <p class="font-semibold text-green-600">Metric: +10-15% revenue from top 25.</p>
+                </div>
+                <!-- Vertical Diversification -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7A2 2 0 0112 21H7a2 2 0 01-2-2V5a2 2 0 012-2z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Vertical Diversification</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Target new, high-growth industries like Renewables, Electronics, and Pharma with specialized SLAs.</p>
+                    <p class="font-semibold text-green-600">Metric: Secure 5+ new anchor clients.</p>
+                </div>
+                <!-- Bundling -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Service Bundling</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Proactively offer integrated solutions combining transport, warehousing, and distribution.</p>
+                    <p class="font-semibold text-green-600">Metric: 25%+ clients using >1 service.</p>
+                </div>
+                <!-- Digital Funnel -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Build a Digital Funnel</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Implement a single-window CRM for lead scoring, automated follow-ups, and sales tracking.</p>
+                    <p class="font-semibold text-green-600">Metric: Increase conversion rate by 20%+.</p>
+                </div>
+                <!-- Vendor Power -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Strengthen Vendor Power</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Build a loyal vendor base through fair practices, timely payments, and bulk rate deals.</p>
+                    <p class="font-semibold text-green-600">Metric: Reduce costs by 5-10%.</p>
+                </div>
+                 <!-- Network Expansion -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-blue-900">Network Expansion</h3>
+                    </div>
+                    <p class="mb-2"><strong class="font-semibold">Action:</strong> Strategically establish PTL networks and partnerships in the South and East regions.</p>
+                    <p class="font-semibold text-green-600">Metric: Achieve pan-India service capability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: Q&A -->
+    <section id="slide-9" class="slide bg-gradient-to-br from-blue-900 to-gray-900 text-white">
+        <div class="slide-content text-center fade-in">
+            <h2 class="text-6xl font-bold mb-8">Q&A</h2>
+            <p class="text-3xl mb-12">Thank You</p>
+            <div class="mb-4">
+                <svg class="w-24 h-24 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 19H15.5C16.8807 19 18 17.8807 18 16.5V13.0588C18 12.5161 17.794 11.996 17.4344 11.6364L13.6364 7.83841C13.2767 7.47878 12.7567 7.27273 12.214 7.27273H8.5C7.11929 7.27273 6 8.39202 6 9.77273V16.5C6 17.8807 7.11929 19 8.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 5H13C14.1046 5 15 5.89543 15 7V7.27273" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h3 class="text-4xl font-bold">BEST ROADWAYS LIMITED</h3>
+        </div>
+    </section>
+
+    <script>
+        // Chart.js for Revenue Split
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Own Vehicle Business', 'Market Vehicle Business', 'Multimodal', 'Petroleum'],
+                datasets: [{
+                    label: 'Revenue in Crores',
+                    data: [220, 290, 10, 70],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.8)', // blue
+                        'rgba(34, 197, 94, 0.8)', // green
+                        'rgba(249, 115, 22, 0.8)', // orange
+                        'rgba(107, 114, 128, 0.8)' // gray
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(34, 197, 94, 1)',
+                        'rgba(249, 115, 22, 1)',
+                        'rgba(107, 114, 128, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Revenue Contribution by Business Segment (in Crores)',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        // Slide Navigation and Scrollspy
+        const slides = document.querySelectorAll('.slide');
+        const navContainer = document.getElementById('slide-nav');
+
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('nav-dot');
+            dot.dataset.slide = index + 1;
+            dot.addEventListener('click', () => {
+                slide.scrollIntoView({ behavior: 'smooth' });
+            });
+            navContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.nav-dot');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const slideNum = entry.target.id.split('-')[1];
+                    dots.forEach(dot => {
+                        dot.classList.remove('active');
+                        if (dot.dataset.slide === slideNum) {
+                            dot.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        slides.forEach(slide => {
+            observer.observe(slide);
+        });
+    </script>
+
+</body>
+</html>
