@@ -28,6 +28,7 @@
             width: 100%;
             max-width: 1200px;
             margin: auto;
+            position: relative;
         }
         .slide-nav {
             position: fixed;
@@ -58,6 +59,12 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .logo {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -68,13 +75,12 @@
     <!-- Slide 1: Title -->
     <section id="slide-1" class="slide bg-gradient-to-br from-blue-900 to-gray-900 text-white">
         <div class="slide-content text-center fade-in">
-            <div class="mb-4">
-                <svg class="w-24 h-24 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 19H15.5C16.8807 19 18 17.8807 18 16.5V13.0588C18 12.5161 17.794 11.996 17.4344 11.6364L13.6364 7.83841C13.2767 7.47878 12.7567 7.27273 12.214 7.27273H8.5C7.11929 7.27273 6 8.39202 6 9.77273V16.5C6 17.8807 7.11929 19 8.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 5H13C14.1046 5 15 5.89543 15 7V7.27273" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+             <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="white">group.best</text>
                 </svg>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">BEST ROADWAYS LIMITED</h1>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 mt-20">BEST ROADWAYS LIMITED</h1>
             <p class="text-2xl md:text-4xl text-blue-300">Scaling Up B2B Logistics: Challenges & Solutions</p>
             <p class="mt-8 text-lg text-gray-400">August 2025</p>
         </div>
@@ -83,7 +89,12 @@
     <!-- Slide 2: Service Offerings -->
     <section id="slide-2" class="slide bg-white">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Our Service Offerings</h2>
+             <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Our Service Offerings</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
                 <!-- FTL -->
                 <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow">
@@ -122,7 +133,12 @@
     <!-- Slide 3: Revenue and Margin Split -->
     <section id="slide-3" class="slide bg-blue-50">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Revenue & Margin Analysis</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Revenue & Margin Analysis</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                     <canvas id="revenueChart"></canvas>
@@ -155,12 +171,17 @@
     <!-- Slide 4: The Core Challenge -->
     <section id="slide-4" class="slide bg-gray-800 text-white">
         <div class="slide-content text-center fade-in">
-            <h2 class="text-4xl font-bold mb-6">The Core Challenge: Achieving Scale</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="white">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold mb-6 mt-16">The Core Challenge: Achieving Scale</h2>
             <p class="text-xl text-gray-300 mb-12">Our goal is to accelerate growth beyond the industry average.</p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
                 <div class="bg-gray-700 p-8 rounded-lg shadow-lg text-center">
                     <p class="text-2xl font-semibold text-blue-300">Last YoY Growth</p>
-                    <p class="text-6xl font-bold text-red-400 my-2">16.75%</p>
+                    <p class="text-6xl font-bold text-red-400 my-2">15.75%</p>
                 </div>
                 <div class="text-5xl text-gray-500">&rarr;</div>
                 <div class="bg-gray-700 p-8 rounded-lg shadow-lg text-center">
@@ -174,7 +195,12 @@
     <!-- Slide 5: Broad Challenges -->
     <section id="slide-5" class="slide bg-white">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Industry Headwinds & Internal Gaps</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Industry Headwinds & Internal Gaps</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="flex items-start p-4">
                     <div class="flex-shrink-0"><svg class="w-12 h-12 text-red-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6"></path></svg></div>
@@ -207,13 +233,18 @@
     <!-- Slide 6: Competitive Landscape -->
     <section id="slide-6" class="slide bg-blue-50">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Competitive Landscape</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Competitive Landscape</h2>
             <div class="overflow-x-auto rounded-lg shadow-lg">
                 <table class="w-full text-left bg-white">
                     <thead class="bg-blue-800 text-white">
                         <tr>
                             <th class="p-4 font-semibold">Company</th>
-                            <th class="p-4 font-semibold">Operating Income (FY24)</th>
+                            <th class="p-4 font-semibold">Projected Income (FY25)</th>
                             <th class="p-4 font-semibold">YoY Growth</th>
                         </tr>
                     </thead>
@@ -235,8 +266,8 @@
                         </tr>
                         <tr class="bg-blue-100">
                             <td class="p-4 font-bold text-blue-900">Best Roadways Ltd</td>
-                            <td class="p-4 font-bold">₹ 515 Cr</td>
-                            <td class="p-4"><span class="text-orange-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>16.75%</span></td>
+                            <td class="p-4 font-bold">₹ 590 Cr</td>
+                            <td class="p-4"><span class="text-orange-600 font-bold flex items-center"><svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>15.75%</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -247,7 +278,12 @@
     <!-- Slide 7: Gap Analysis -->
     <section id="slide-7" class="slide bg-white">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Gap Analysis vs. Peers</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Gap Analysis vs. Peers</h2>
             <div class="space-y-6">
                 <!-- Anchor Accounts -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md">
@@ -289,7 +325,12 @@
     <!-- Slide 8: Strategic Solutions -->
     <section id="slide-8" class="slide bg-blue-50">
         <div class="slide-content fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">Our Strategic Path to 25%+ Growth</h2>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a">group.best</text>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-900 mt-16">Our Strategic Path to 25%+ Growth</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Key Accounts -->
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
@@ -352,14 +393,13 @@
     <!-- Slide 9: Q&A -->
     <section id="slide-9" class="slide bg-gradient-to-br from-blue-900 to-gray-900 text-white">
         <div class="slide-content text-center fade-in">
-            <h2 class="text-6xl font-bold mb-8">Q&A</h2>
-            <p class="text-3xl mb-12">Thank You</p>
-            <div class="mb-4">
-                <svg class="w-24 h-24 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.5 19H15.5C16.8807 19 18 17.8807 18 16.5V13.0588C18 12.5161 17.794 11.996 17.4344 11.6364L13.6364 7.83841C13.2767 7.47878 12.7567 7.27273 12.214 7.27273H8.5C7.11929 7.27273 6 8.39202 6 9.77273V16.5C6 17.8807 7.11929 19 8.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 5H13C14.1046 5 15 5.89543 15 7V7.27273" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="logo">
+                <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="25" font-family="Inter, sans-serif" font-size="24" font-weight="bold" fill="white">group.best</text>
                 </svg>
             </div>
+            <h2 class="text-6xl font-bold mb-8 mt-16">Q&A</h2>
+            <p class="text-3xl mb-12">Thank You</p>
             <h3 class="text-4xl font-bold">BEST ROADWAYS LIMITED</h3>
         </div>
     </section>
